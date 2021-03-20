@@ -13,8 +13,14 @@ function App() {
 
   const apiURL = "https://covid-api.mmediagroup.fr/v1/cases?country=Sweden";
 
-  let covidData = fetch(apiURL).then((response) => response.json());
-  console.log(covidData);
+  const fetchData = async () => {
+    return fetch(apiURL)
+      .then((response) => response.json())
+      .then((json) => json);
+  };
+
+  let someData = fetchData().then((data) => data);
+  console.log(someData);
 
   if (counter === 0) {
     return (
@@ -22,7 +28,7 @@ function App() {
         <Grid item xs={12}>
           <Header />
         </Grid>
-        <Statistics apiURL={apiURL} />
+        <Statistics covidData={""} />
         <Grid item xs={12}>
           <BottonNav counter={counter} setCounter={setCounter} />
         </Grid>
