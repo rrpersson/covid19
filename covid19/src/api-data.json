@@ -1,0 +1,185 @@
+{
+  "All": {
+    "confirmed": 744272,
+    "recovered": 0,
+    "deaths": 13262,
+    "country": "Sweden",
+    "population": 9910701,
+    "sq_km_area": 449964,
+    "life_expectancy": "79.6",
+    "elevation_in_meters": 320,
+    "continent": "Europe",
+    "abbreviation": "SE",
+    "location": "Nordic Countries",
+    "iso": 752,
+    "capital_city": "Stockholm"
+  },
+  "Blekinge": {
+    "lat": "56.2784",
+    "long": "15.018",
+    "confirmed": 8461,
+    "recovered": 0,
+    "deaths": 118,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Dalarna": {
+    "lat": "61.0917",
+    "long": "14.6664",
+    "confirmed": 16863,
+    "recovered": 0,
+    "deaths": 307,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Gavleborg": {
+    "lat": "61.3012",
+    "long": "16.1534",
+    "confirmed": 25545,
+    "recovered": 0,
+    "deaths": 510,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Gotland": {
+    "lat": "57.4684",
+    "long": "18.4867",
+    "confirmed": 2872,
+    "recovered": 0,
+    "deaths": 46,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Halland": {
+    "lat": "56.8967",
+    "long": "12.8034",
+    "confirmed": 28262,
+    "recovered": 0,
+    "deaths": 285,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Jamtland Harjedalen": {
+    "lat": "63.1712",
+    "long": "14.9592",
+    "confirmed": 7927,
+    "recovered": 0,
+    "deaths": 117,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Jonkoping": {
+    "lat": "57.3708",
+    "long": "14.3439",
+    "confirmed": 30459,
+    "recovered": 0,
+    "deaths": 526,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Kalmar": {
+    "lat": "57.235",
+    "long": "16.1849",
+    "confirmed": 13253,
+    "recovered": 0,
+    "deaths": 217,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Kronoberg": {
+    "lat": "56.7183",
+    "long": "14.4115",
+    "confirmed": 14762,
+    "recovered": 0,
+    "deaths": 296,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Norrbotten": {
+    "lat": "66.8309",
+    "long": "20.3992",
+    "confirmed": 15211,
+    "recovered": 0,
+    "deaths": 234,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Orebro": {
+    "lat": "59.535",
+    "long": "15.0066",
+    "confirmed": 20084,
+    "recovered": 0,
+    "deaths": 296,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Ostergotland": {
+    "lat": "58.3454",
+    "long": "15.5198",
+    "confirmed": 25883,
+    "recovered": 0,
+    "deaths": 572,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Skane": {
+    "lat": "55.9903",
+    "long": "13.5958",
+    "confirmed": 118480,
+    "recovered": 0,
+    "deaths": 1616,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Sormland": {
+    "lat": "59.0336",
+    "long": "16.7519",
+    "confirmed": 15464,
+    "recovered": 0,
+    "deaths": 410,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Stockholm": {
+    "lat": "59.6025",
+    "long": "18.1384",
+    "confirmed": 177379,
+    "recovered": 0,
+    "deaths": 3966,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Uppsala": {
+    "lat": "60.0092",
+    "long": "17.2715",
+    "confirmed": 26852,
+    "recovered": 0,
+    "deaths": 489,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Varmland": {
+    "lat": "59.7294",
+    "long": "13.2354",
+    "confirmed": 10927,
+    "recovered": 0,
+    "deaths": 180,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Vasterbotten": {
+    "lat": "65.3337",
+    "long": "16.5162",
+    "confirmed": 17173,
+    "recovered": 0,
+    "deaths": 158,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Vasternorrland": {
+    "lat": "63.4276",
+    "long": "17.7292",
+    "confirmed": 16321,
+    "recovered": 0,
+    "deaths": 423,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Vastmanland": {
+    "lat": "59.6714",
+    "long": "16.2159",
+    "confirmed": 19669,
+    "recovered": 0,
+    "deaths": 330,
+    "updated": "2021/03/20 19:27:19+00"
+  },
+  "Vastra Gotaland": {
+    "lat": "58.2528",
+    "long": "13.0596",
+    "confirmed": 132425,
+    "recovered": 0,
+    "deaths": 2166,
+    "updated": "2021/03/20 19:27:19+00"
+  }
+}

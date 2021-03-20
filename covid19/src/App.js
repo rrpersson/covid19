@@ -11,7 +11,10 @@ import Grid from "@material-ui/core/Grid";
 function App() {
   const [counter, setCounter] = useState(0);
 
-  const apiURL = "https://covid-api.mmediagroup.fr/v1/";
+  const apiURL = "https://covid-api.mmediagroup.fr/v1/cases?country=Sweden";
+
+  let covidData = fetch(apiURL).then((response) => response.json());
+  console.log(covidData);
 
   if (counter === 0) {
     return (

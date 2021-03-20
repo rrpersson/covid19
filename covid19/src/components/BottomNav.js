@@ -7,7 +7,7 @@ import EqualizerOutlinedIcon from "@material-ui/icons/EqualizerOutlined";
 
 const BottomNav = ({ counter, setCounter, setCounterChange }) => {
   return (
-    <BottomNavigation showLabels="true" value={counter}>
+    <BottomNavigation showLabels="true">
       <BottomNavigationAction
         label="Statistik"
         value="Statistik"
