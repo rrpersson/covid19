@@ -13,15 +13,6 @@ function App() {
 
   const apiURL = "https://covid-api.mmediagroup.fr/v1/cases?country=Sweden";
 
-  const fetchData = async () => {
-    return fetch(apiURL)
-      .then((response) => response.json())
-      .then((json) => json);
-  };
-
-  let someData = fetchData().then((data) => data);
-  console.log(someData);
-
   if (counter === 0) {
     return (
       <Grid container spacing={1}>
