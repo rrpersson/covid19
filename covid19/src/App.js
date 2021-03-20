@@ -1,5 +1,7 @@
 import BottonNav from "./components/BottomNav";
 import Header from "./components/Header";
+import Info from "./components/Info";
+import Statistics from "./components/Statistics";
 import "./App.css";
 
 import { useState } from "react";
@@ -15,6 +17,7 @@ function App() {
         <Grid item xs={12}>
           <Header />
         </Grid>
+        <Statistics />
         <Grid item xs={12}>
           <BottonNav counter={counter} setCounter={setCounter} />
         </Grid>
@@ -26,6 +29,7 @@ function App() {
         <Grid item xs={12}>
           <Header />
         </Grid>
+        <Info />
         <Grid item xs={12}>
           <BottonNav counter={counter} setCounter={setCounter} />
         </Grid>
