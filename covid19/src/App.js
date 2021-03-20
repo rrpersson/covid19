@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Info from "./components/Info";
 import Statistics from "./components/Statistics";
 import "./App.css";
+import data from "../src/api-data.json";
 
 import { useState } from "react";
 
@@ -19,7 +20,7 @@ function App() {
         <Grid item xs={12}>
           <Header />
         </Grid>
-        <Statistics covidData={""} />
+        <Statistics covidData={data} />
         <Grid item xs={12}>
           <BottonNav counter={counter} setCounter={setCounter} />
         </Grid>
