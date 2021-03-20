@@ -17,8 +17,8 @@ const BottomNav = ({ counter, setCounter, setCounterChange }) => {
         }}
       />
       <BottomNavigationAction
-        label="Info"
-        value="Info"
+        label="App Info"
+        value="App Info"
         icon={<InfoOutlined />}
         onClick={() => {
           setCounter(1);

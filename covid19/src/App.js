@@ -11,13 +11,15 @@ import Grid from "@material-ui/core/Grid";
 function App() {
   const [counter, setCounter] = useState(0);
 
+  const apiURL = "https://covid-api.mmediagroup.fr/v1/";
+
   if (counter === 0) {
     return (
-      <Grid container spacing={1} justify="center" alignContent="center">
+      <Grid container spacing={1}>
         <Grid item xs={12}>
           <Header />
         </Grid>
-        <Statistics />
+        <Statistics apiURL={apiURL} />
         <Grid item xs={12}>
           <BottonNav counter={counter} setCounter={setCounter} />
         </Grid>
@@ -25,7 +27,7 @@ function App() {
     );
   } else {
     return (
-      <Grid container spacing={1} justify="center" alignContent="center">
+      <Grid container spacing={1}>
         <Grid item xs={12}>
           <Header />
         </Grid>
