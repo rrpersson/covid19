@@ -20,64 +20,83 @@ const SearchResult = ({ covidData }) => {
 
   const population = covidData.All.population;
   let locationInfo = null;
-
+  let lastUpdated = null;
   switch (text) {
     case "Stockholm":
       locationInfo = covidData.Stockholm;
+      lastUpdated = locationInfo.updated;
       break;
     case "Blekinge":
       locationInfo = covidData.Blekinge;
+      lastUpdated = locationInfo.updated;
       break;
     case "Dalarna":
       locationInfo = covidData.Dalarna;
+      lastUpdated = locationInfo.updated;
       break;
     case "Gavleborg":
       locationInfo = covidData.Gavleborg;
+      lastUpdated = locationInfo.updated;
       break;
     case "Gotland":
       locationInfo = covidData.Gotland;
+      lastUpdated = locationInfo.updated;
       break;
     case "Halland":
       locationInfo = covidData.Halland;
+      lastUpdated = locationInfo.updated;
       break;
     case "Jonkoping":
       locationInfo = covidData.Jonkoping;
+      lastUpdated = locationInfo.updated;
       break;
     case "Kalmar":
       locationInfo = covidData.Kalmar;
+      lastUpdated = locationInfo.updated;
       break;
     case "Kronoberg":
       locationInfo = covidData.Kronoberg;
+      lastUpdated = locationInfo.updated;
       break;
     case "Norrbotten":
       locationInfo = covidData.Norrbotten;
+      lastUpdated = locationInfo.updated;
       break;
     case "Orebro":
       locationInfo = covidData.Orebro;
+      lastUpdated = locationInfo.updated;
       break;
     case "Ostergotland":
       locationInfo = covidData.Ostergotland;
+      lastUpdated = locationInfo.updated;
       break;
     case "Skane":
       locationInfo = covidData.Skane;
+      lastUpdated = locationInfo.updated;
       break;
     case "Sormland":
       locationInfo = covidData.Sormland;
+      lastUpdated = locationInfo.updated;
       break;
     case "Uppsala":
       locationInfo = covidData.Uppsala;
+      lastUpdated = locationInfo.updated;
       break;
     case "Varmland":
       locationInfo = covidData.Varmland;
+      lastUpdated = locationInfo.updated;
       break;
     case "Vasterbotten":
       locationInfo = covidData.Vasterbotten;
+      lastUpdated = locationInfo.updated;
       break;
     case "Vastmanland":
       locationInfo = covidData.Vastmanland;
+      lastUpdated = locationInfo.updated;
       break;
     default:
       locationInfo = null;
+      lastUpdated = null;
   }
   return (
     <Grid container spacing={0}>
@@ -142,6 +161,9 @@ const SearchResult = ({ covidData }) => {
               { name: "Bekräftade dödsfall", value: locationInfo.deaths },
             ]}
           />
+          <Typography align="center" variant="subtitle1" color="initial">
+            {/* Senast uppdaterad: {lastUpdated} */}
+          </Typography>
         </Paper>
       </Grid>
     </Grid>
