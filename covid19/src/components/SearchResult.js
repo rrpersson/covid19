@@ -140,7 +140,10 @@ const SearchResult = ({ covidData }) => {
           <CustomPieChart
             pieData={[
               { name: "Antal invånare i Sverige", value: population },
-              { name: "Bekräftade dödsfall", value: locationInfo.confirmed },
+              {
+                name: "Covid19 fall",
+                value: locationInfo.confirmed,
+              },
             ]}
           />
         </Paper>
