@@ -120,7 +120,7 @@ const SearchResult = ({ covidData }) => {
           </Typography>
           <CustomPieChart
             pieData={[
-              { name: "Covid19 fall", value: population },
+              { name: "Antal invånare i Sverige", value: population },
               { name: "Bekräftade dödsfall", value: locationInfo.confirmed },
             ]}
           />
