@@ -4,8 +4,9 @@ import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import InfoOutlined from "@material-ui/icons/InfoOutlined";
 import EqualizerOutlinedIcon from "@material-ui/icons/EqualizerOutlined";
+import SearchIcon from "@material-ui/icons/Search";
 
-const BottomNav = ({ counter, setCounter, setCounterChange }) => {
+const BottomNav = ({ appCounter, setAppCounter }) => {
   return (
     <BottomNavigation
       showLabels="true"
@@ -17,18 +18,26 @@ const BottomNav = ({ counter, setCounter, setCounterChange }) => {
     >
       <BottomNavigationAction
         label="Statistik"
-        value="Statistik"
+        value="statistics"
         icon={<EqualizerOutlinedIcon />}
         onClick={() => {
-          setCounter(0);
+          setAppCounter("statistics");
+        }}
+      />
+      <BottomNavigationAction
+        label="Sök"
+        value="search"
+        icon={<SearchIcon />}
+        onClick={() => {
+          setAppCounter("search");
         }}
       />
       <BottomNavigationAction
         label="App Info"
-        value="App Info"
+        value="appInfo"
         icon={<InfoOutlined />}
         onClick={() => {
-          setCounter(1);
+          setAppCounter("");
         }}
       />
     </BottomNavigation>

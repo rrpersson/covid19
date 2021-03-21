@@ -1,7 +1,8 @@
-import BottonNav from "./components/BottomNav";
+import BottomNav from "./components/BottomNav";
 import Header from "./components/Header";
 import Info from "./components/Info";
 import Statistics from "./components/Statistics";
+import SearchResult from "./components/SearchResult";
 import "./App.css";
 
 import { useEffect, useState } from "react";
@@ -9,7 +10,7 @@ import { useEffect, useState } from "react";
 import Grid from "@material-ui/core/Grid";
 
 function App() {
-  const [counter, setCounter] = useState(1);
+  const [appCounter, setAppCounter] = useState("");
   const [covidData, setCovidData] = useState();
 
   const apiURL = "https://covid-api.mmediagroup.fr/v1/cases?country=Sweden";
@@ -20,7 +21,7 @@ function App() {
       .then((json) => setCovidData(json));
   }, []);
 
-  if (counter === 0) {
+  if (appCounter === "statistics") {
     return (
       <Grid container spacing={1}>
         <Grid item xs={12}>
@@ -28,7 +29,19 @@ function App() {
         </Grid>
         <Statistics covidData={covidData} />
         <Grid item xs={12}>
-          <BottonNav counter={counter} setCounter={setCounter} />
+          <BottomNav appCounter={appCounter} setAppCounter={setAppCounter} />
+        </Grid>
+      </Grid>
+    );
+  } else if (appCounter === "search") {
+    return (
+      <Grid container spacing={1}>
+        <Grid item xs={12}>
+          <Header />
+        </Grid>
+        <SearchResult covidData={covidData} />
+        <Grid item xs={12}>
+          <BottomNav appCounter={appCounter} setAppCounter={setAppCounter} />
         </Grid>
       </Grid>
     );
@@ -40,7 +53,7 @@ function App() {
         </Grid>
         <Info />
         <Grid item xs={12}>
-          <BottonNav counter={counter} setCounter={setCounter} />
+          <BottomNav appCounter={appCounter} setAppCounter={setAppCounter} />
         </Grid>
       </Grid>
     );

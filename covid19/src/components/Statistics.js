@@ -5,7 +5,6 @@ import Typography from "@material-ui/core/Typography";
 import { PieChart, Pie, Tooltip, ResponsiveContainer } from "recharts";
 
 const Statistics = ({ covidData }) => {
-  console.log(covidData);
   const chartDataConfirmedCases = [
     { name: "Invånare i Sverige", value: covidData.All.population },
     { name: "Bekräftade Covid19 fall", value: covidData.All.confirmed },
