@@ -9,6 +9,7 @@ import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
+import Typography from "@material-ui/core/Typography";
 
 const SearchResult = ({ covidData }) => {
   console.log(covidData);
@@ -18,6 +19,67 @@ const SearchResult = ({ covidData }) => {
     setText(event.target.value);
   };
 
+  const population = covidData.All.population;
+  let locationInfo = null;
+
+  switch (text) {
+    case "Stockholm":
+      locationInfo = covidData.Stockholm;
+      break;
+    case "Blekinge":
+      locationInfo = covidData.Blekinge;
+      break;
+    case "Dalarna":
+      locationInfo = covidData.Dalarna;
+      break;
+    case "Gavleborg":
+      locationInfo = covidData.Gavleborg;
+      break;
+    case "Gotland":
+      locationInfo = covidData.Gotland;
+      break;
+    case "Halland":
+      locationInfo = covidData.Halland;
+      break;
+    case "Jonkoping":
+      locationInfo = covidData.Jonkoping;
+      break;
+    case "Kalmar":
+      locationInfo = covidData.Kalmar;
+      break;
+    case "Kronoberg":
+      locationInfo = covidData.Kronoberg;
+      break;
+    case "Norrbotten":
+      locationInfo = covidData.Norrbotten;
+      break;
+    case "Orebro":
+      locationInfo = covidData.Orebro;
+      break;
+    case "Ostergotland":
+      locationInfo = covidData.Ostergotland;
+      break;
+    case "Skane":
+      locationInfo = covidData.Skane;
+      break;
+    case "Sormland":
+      locationInfo = covidData.Sormland;
+      break;
+    case "Uppsala":
+      locationInfo = covidData.Uppsala;
+      break;
+    case "Varmland":
+      locationInfo = covidData.Varmland;
+      break;
+    case "Vasterbotten":
+      locationInfo = covidData.Vasterbotten;
+      break;
+    case "Vastmanland":
+      locationInfo = covidData.Vastmanland;
+      break;
+    default:
+      locationInfo = null;
+  }
   return (
     <Grid container spacing={0}>
       <Grid item xs={12}>
@@ -31,9 +93,6 @@ const SearchResult = ({ covidData }) => {
               <MenuItem value="Gavleborg">Gävleborg</MenuItem>
               <MenuItem value="Gotland">Gotland</MenuItem>
               <MenuItem value="Halland">Halland</MenuItem>
-              <MenuItem value="Jamtland Harjedalen">
-                Jämtland & Härjedalen
-              </MenuItem>
               <MenuItem value="Jonkoping">Jönköping</MenuItem>
               <MenuItem value="Kalmar">Kalmar</MenuItem>
               <MenuItem value="Kronoberg">Kronoberg</MenuItem>
@@ -46,7 +105,6 @@ const SearchResult = ({ covidData }) => {
               <MenuItem value="Varmland">Värmland</MenuItem>
               <MenuItem value="Vasterbotten">Västerbotten</MenuItem>
               <MenuItem value="Vastmanland">Västmanland</MenuItem>
-              <MenuItem value="Vastra Gotaland">Västa Götaland</MenuItem>
             </Select>
           </FormControl>
         </Grid>
@@ -58,11 +116,34 @@ const SearchResult = ({ covidData }) => {
             padding: 30,
           }}
         >
-          <Grid container justify="center">
-            <p>Du sökte på {text}</p>
-          </Grid>
+          <Typography align="center" variant="h6" color="initial">
+            Bekräftade Covid19 fall
+          </Typography>
+          <CustomPieChart
+            pieData={[
+              { name: "Covid19 fall", value: population },
+              { name: "Bekräftade dödsfall", value: locationInfo.confirmed },
+            ]}
+          />
         </Paper>
-        <CustomPieChart covidData={covidData} />
+      </Grid>
+      <Grid container justify="center">
+        <Paper
+          style={{
+            width: "100%",
+            padding: 30,
+          }}
+        >
+          <Typography align="center" variant="h6" color="initial">
+            Antal bekräftade fall som avlidit
+          </Typography>
+          <CustomPieChart
+            pieData={[
+              { name: "Covid19 fall", value: locationInfo.confirmed },
+              { name: "Bekräftade dödsfall", value: locationInfo.deaths },
+            ]}
+          />
+        </Paper>
       </Grid>
     </Grid>
   );

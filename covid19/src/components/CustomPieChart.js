@@ -1,11 +1,11 @@
 import React from "react";
 import { PieChart, Pie, Tooltip, ResponsiveContainer } from "recharts";
 
-const CustomPieChart = ({ covidData }) => {
-  const pieData = [
-    { name: "Covid19 fall", value: covidData.Halland.confirmed },
-    { name: "Bekräftade dödsfall", value: covidData.Halland.deaths },
-  ];
+const CustomPieChart = ({ pieData }) => {
+  // const pieData = [
+  //   { name: "Covid19 fall", value: population },
+  //   { name: "Bekräftade dödsfall", value: locationInfo.confirmed },
+  // ];
 
   return (
     <ResponsiveContainer width="100%" height={200}>
