@@ -14,6 +14,14 @@ function App() {
 
   // const apiURL = "https://covid-api.mmediagroup.fr/v1/cases?country=Sweden";
 
+  // let someData;
+
+  // fetch(apiURL)
+  //   .then((response) => response.json())
+  //   .then((json) => (someData = json));
+
+  // console.log(someData);
+
   if (counter === 0) {
     return (
       <Grid container spacing={1}>
