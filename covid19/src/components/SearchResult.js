@@ -12,7 +12,6 @@ import Select from "@material-ui/core/Select";
 import Typography from "@material-ui/core/Typography";
 
 const SearchResult = ({ covidData }) => {
-  console.log(covidData);
   const [text, setText] = useState("Stockholm");
 
   const setTextChange = (event) => {
