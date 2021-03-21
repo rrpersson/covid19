@@ -24,13 +24,7 @@ const SearchResult = ({ covidData }) => {
         <Grid container justify="center">
           <FormControl style={{ width: "90%" }}>
             <InputLabel id="selectList">Plats</InputLabel>
-            <Select
-              labelID="selectList-label"
-              id="selectList"
-              value={text}
-              onChange={setTextChange}
-            >
-              <MenuItem value="" disabled></MenuItem>
+            <Select id="selectList" onChange={setTextChange} value={text}>
               <MenuItem value="Stockholm">Stockholm</MenuItem>
               <MenuItem value="Blekinge">Blekinge</MenuItem>
               <MenuItem value="Dalarna">Dalarna</MenuItem>
@@ -68,7 +62,7 @@ const SearchResult = ({ covidData }) => {
             <p>Du sökte på {text}</p>
           </Grid>
         </Paper>
-        <CustomPieChart covidData={covidData} text={text} />
+        <CustomPieChart covidData={covidData} />
       </Grid>
     </Grid>
   );

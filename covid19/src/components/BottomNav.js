@@ -33,8 +33,8 @@ const BottomNav = ({ appCounter, setAppCounter }) => {
         }}
       />
       <BottomNavigationAction
-        label="App Info"
-        value="appInfo"
+        label="Info"
+        value="info"
         icon={<InfoOutlined />}
         onClick={() => {
           setAppCounter("");
