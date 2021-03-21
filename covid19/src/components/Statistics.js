@@ -5,14 +5,15 @@ import Typography from "@material-ui/core/Typography";
 import { PieChart, Pie, Tooltip, ResponsiveContainer } from "recharts";
 
 const Statistics = ({ covidData }) => {
+  console.log(covidData);
   const chartDataConfirmedCases = [
     { name: "Invånare i Sverige", value: covidData.All.population },
-    { name: "Bekräftade fall", value: covidData.All.confirmed },
+    { name: "Bekräftade Covid19 fall", value: covidData.All.confirmed },
   ];
 
   const chartDataConfirmedDeaths = [
     { name: "Covid19 fall", value: covidData.All.confirmed },
-    { name: "Bekräftade dödsfallfall", value: covidData.All.deaths },
+    { name: "Bekräftade dödsfall", value: covidData.All.deaths },
   ];
 
   return (
@@ -24,7 +25,7 @@ const Statistics = ({ covidData }) => {
           }}
         >
           <Typography align="center" variant="h6" color="initial">
-            Bekräftade covid19 fall i Sverige
+            Bekräftade Covid19 fall i Sverige
           </Typography>
           <ResponsiveContainer width="100%" height={200}>
             <PieChart width={400} height={200}>
@@ -48,7 +49,7 @@ const Statistics = ({ covidData }) => {
           }}
         >
           <Typography align="center" variant="h6" color="initial">
-            Bekräftade dödsfall i Sverige
+            Antal bekräftade fall som avlidit
           </Typography>
           <ResponsiveContainer width="100%" height={200}>
             <PieChart width={400} height={200}>

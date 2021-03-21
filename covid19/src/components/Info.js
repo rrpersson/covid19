@@ -19,9 +19,23 @@ const Info = () => {
             <Typography align="center" variant="h6" color="initial">
               Tack för att ni använder denna app.
             </Typography>
-            <Typography align="center" variant="h6" color="initial">
-              Tack till <a href="https://skanesit.se">Skånes IT</a> som har
-              utvecklat denna app.
+            <br />
+            <Typography
+              variant="body1"
+              color="initial"
+              style={{
+                paddingRight: 30,
+                paddingLeft: 30,
+              }}
+            >
+              Vi har valt att plocka fram en app som enkelt ska kunna visa dig
+              nödvändig information på ett och samma ställe. All data som ni kan
+              se i appen uppdateras varje dag för att ni enkelt ska kunna få så
+              exakta siffror som möjligt.
+            </Typography>
+            <br />
+            <Typography align="center" variant="body2" color="initial">
+              App skapad av <a href="https://skanesit.se">Skånes IT</a>
             </Typography>
           </Grid>
         </Grid>
