@@ -1,41 +1,77 @@
 import React from "react";
 import { useState } from "react";
-import Button from "@material-ui/core/Button";
-import Grid from "@material-ui/core/Grid";
-import TextField from "@material-ui/core/TextField";
 
-const SearchResult = () => {
-  const [searchResult, setSearchResult] = useState("start");
-  const [text, setText] = useState("");
+import CustomPieChart from "./CustomPieChart";
+
+import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+
+const SearchResult = ({ covidData }) => {
+  console.log(covidData);
+  const [text, setText] = useState("Stockholm");
 
   const setTextChange = (event) => {
     setText(event.target.value);
   };
 
-  if (searchResult === "start") {
-    return (
-      <Grid container spacing={0}>
-        <Grid item xs={12}>
-          <Grid container justify="center">
-            <TextField
-              variant="filled"
-              id="search"
-              label="Sök på län"
-              placeholder="Skåne"
-              autoFocus="true"
-              onChange={setTextChange}
+  return (
+    <Grid container spacing={0}>
+      <Grid item xs={12}>
+        <Grid container justify="center">
+          <FormControl style={{ width: "90%" }}>
+            <InputLabel id="selectList">Plats</InputLabel>
+            <Select
+              labelID="selectList-label"
+              id="selectList"
               value={text}
-            />
-            <Button variant="contained" color="primary" type="submit">
-              Sök
-            </Button>
-          </Grid>
+              onChange={setTextChange}
+            >
+              <MenuItem value="" disabled></MenuItem>
+              <MenuItem value="Stockholm">Stockholm</MenuItem>
+              <MenuItem value="Blekinge">Blekinge</MenuItem>
+              <MenuItem value="Dalarna">Dalarna</MenuItem>
+              <MenuItem value="Gavleborg">Gävleborg</MenuItem>
+              <MenuItem value="Gotland">Gotland</MenuItem>
+              <MenuItem value="Halland">Halland</MenuItem>
+              <MenuItem value="Jamtland Harjedalen">
+                Jämtland & Härjedalen
+              </MenuItem>
+              <MenuItem value="Jonkoping">Jönköping</MenuItem>
+              <MenuItem value="Kalmar">Kalmar</MenuItem>
+              <MenuItem value="Kronoberg">Kronoberg</MenuItem>
+              <MenuItem value="Norrbotten">Norrbotten</MenuItem>
+              <MenuItem value="Orebro">Örebro</MenuItem>
+              <MenuItem value="Ostergotland">Östergötland</MenuItem>
+              <MenuItem value="Skane">Skåne</MenuItem>
+              <MenuItem value="Sormland">Sörmland</MenuItem>
+              <MenuItem value="Uppsala">Uppsala</MenuItem>
+              <MenuItem value="Varmland">Värmland</MenuItem>
+              <MenuItem value="Vasterbotten">Västerbotten</MenuItem>
+              <MenuItem value="Vastmanland">Västmanland</MenuItem>
+              <MenuItem value="Vastra Gotaland">Västa Götaland</MenuItem>
+            </Select>
+          </FormControl>
         </Grid>
       </Grid>
-    );
-  } else {
-    return <div>daljfhksdjfh</div>;
-  }
+      <Grid container justify="center">
+        <Paper
+          style={{
+            width: "100%",
+            padding: 30,
+          }}
+        >
+          <Grid container justify="center">
+            <p>Du sökte på {text}</p>
+          </Grid>
+        </Paper>
+        <CustomPieChart covidData={covidData} text={text} />
+      </Grid>
+    </Grid>
+  );
 };
 
 export default SearchResult;
